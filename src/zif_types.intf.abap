@@ -26,10 +26,12 @@ INTERFACE zif_types PUBLIC.
       email  TYPE ty_email,
       avatar TYPE ty_uri,
     END OF ty_person,
+    ty_persons TYPE STANDARD TABLE OF ty_person WITH KEY name url email,
     BEGIN OF ty_dependency,
       name  TYPE string,
       range TYPE string,
     END OF ty_dependency,
+    ty_dependencies TYPE STANDARD TABLE OF ty_dependency WITH KEY name,
     BEGIN OF ty_generic,
       key   TYPE string,
       value TYPE string,
@@ -44,13 +46,13 @@ INTERFACE zif_types PUBLIC.
     END OF ty_signature,
     BEGIN OF ty_user,
       name  TYPE string,
-      value TYPE abap_bool,
+      stars TYPE i,
     END OF ty_user,
     BEGIN OF ty_dist,
       file_count    TYPE i,
       integrity     TYPE string,
       shasum        TYPE string,
-      signatures    TYPE STANDARD TABLE OF ty_signature WITH DEFAULT KEY,
+      signatures    TYPE STANDARD TABLE OF ty_signature WITH KEY keyid,
       tarball       TYPE string,
       unpacked_size TYPE i,
     END OF ty_dist.
@@ -72,8 +74,8 @@ INTERFACE zif_types PUBLIC.
       END OF bugs,
       license               TYPE string,
       author                TYPE ty_person,
-      contributors          TYPE STANDARD TABLE OF ty_person WITH KEY name,
-      maintainers           TYPE STANDARD TABLE OF ty_person WITH KEY name,
+      contributors          TYPE ty_persons,
+      maintainers           TYPE ty_persons,
       main                  TYPE string,
       man                   TYPE string_table,
       type                  TYPE string,
@@ -86,12 +88,12 @@ INTERFACE zif_types PUBLIC.
         type TYPE string,
         url  TYPE ty_uri,
       END OF funding,
-      dependencies          TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
-      dev_dependencies      TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
-      optional_dependencies TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
-      peer_dependencies     TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
+      dependencies          TYPE ty_dependencies,
+      dev_dependencies      TYPE ty_dependencies,
+      optional_dependencies TYPE ty_dependencies,
+      peer_dependencies     TYPE ty_dependencies,
       bundle_dependencies   TYPE string_table,
-      engines               TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
+      engines               TYPE ty_dependencies,
       os                    TYPE string_table,
       cpu                   TYPE string_table,
       db                    TYPE string_table,
@@ -101,16 +103,15 @@ INTERFACE zif_types PUBLIC.
 
   " *** MANIFEST ***
 
+  " Full manifest (fetched with "accept: application/json" in HTTP headers)
+  TYPES BEGIN OF ty_manifest.
+  INCLUDE TYPE ty_package_json.
   TYPES:
-    " Full manifest (fetched with "accept: application/json" in HTTP headers)
-    BEGIN OF ty_manifest.
-      INCLUDE TYPE ty_package_json.
-  TYPES:
-      dist           TYPE ty_dist,
-      deprecated     TYPE abap_bool,
-      __id           TYPE string, " external: _id
-      __abap_version TYPE string, " external: _abapVersion
-      __apm_version  TYPE string, " external: _apmVersion
+    dist           TYPE ty_dist,
+    deprecated     TYPE abap_bool,
+    __id           TYPE string, " external: _id
+    __abap_version TYPE string, " external: _abapVersion
+    __apm_version  TYPE string, " external: _apmVersion
     END OF ty_manifest.
 
   TYPES:
@@ -119,12 +120,12 @@ INTERFACE zif_types PUBLIC.
     BEGIN OF ty_manifest_abbreviated,
       name                  TYPE string,
       version               TYPE string,
-      dependencies          TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
-      dev_dependencies      TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
-      optional_dependencies TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
-      peer_dependencies     TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
+      dependencies          TYPE ty_dependencies,
+      dev_dependencies      TYPE ty_dependencies,
+      optional_dependencies TYPE ty_dependencies,
+      peer_dependencies     TYPE ty_dependencies,
       bundle_dependencies   TYPE string_table,
-      engines               TYPE STANDARD TABLE OF ty_dependency WITH DEFAULT KEY,
+      engines               TYPE ty_dependencies,
       os                    TYPE string_table,
       cpu                   TYPE string_table,
       db                    TYPE string_table,
@@ -159,7 +160,7 @@ INTERFACE zif_types PUBLIC.
       dist_tags     TYPE STANDARD TABLE OF ty_generic WITH KEY key,
       time          TYPE STANDARD TABLE OF ty_time WITH KEY key,
       versions      TYPE STANDARD TABLE OF ty_version WITH KEY key,
-      maintainers   TYPE STANDARD TABLE OF ty_person WITH KEY name,
+      maintainers   TYPE ty_persons,
       readme        TYPE string,
       users         TYPE STANDARD TABLE OF ty_user WITH KEY name,
       homepage      TYPE string,
