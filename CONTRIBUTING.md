@@ -1,6 +1,6 @@
 # Contributing to apm
 
-apm welcomes your suggestions and contributions! Before opening your first issue or pull request, please review our [Code of Conduct](CODE_OF_CONDUCT.md) to understand how our community interacts in an inclusive and respectful manner.
+apm welcomes your suggestions and contributions! Before opening your first issue or pull request, please review our [Code of Conduct](https://github.com/abapPM/.github/blob/main/CODE_OF_CONDUCT.md) to understand how our community interacts in an inclusive and respectful manner.
 
 ## General Advice
 
