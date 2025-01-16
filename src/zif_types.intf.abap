@@ -128,7 +128,7 @@ INTERFACE zif_types PUBLIC.
   TYPES:
     "! Abbreviated manifest
     "! (fetched with "accept: application/vnd.npm.install-v1+json" in the HTTP headers)
-    BEGIN OF ty_manifest_abbreviated,
+    BEGIN OF ty_manifest_abbreviated ##NEEDED,
       name                  TYPE string,
       version               TYPE string,
       dependencies          TYPE ty_dependencies,
@@ -142,7 +142,7 @@ INTERFACE zif_types PUBLIC.
       db                    TYPE string_table,
       dist                  TYPE ty_dist,
       deprecated            TYPE abap_bool,
-    END OF ty_manifest_abbreviated ##NEEDED.
+    END OF ty_manifest_abbreviated.
 
   " *** PACKUMENT ***
 
@@ -167,7 +167,7 @@ INTERFACE zif_types PUBLIC.
   TYPES:
     "! Full packument (as fetched from registry)
     "! Some fields are hoisted from latest version to root
-    BEGIN OF ty_packument,
+    BEGIN OF ty_packument ##NEEDED,
       name          TYPE string,
       description   TYPE string,
       dist_tags     TYPE STANDARD TABLE OF ty_generic WITH KEY key,
@@ -193,7 +193,7 @@ INTERFACE zif_types PUBLIC.
       __rev         TYPE string,
       __attachments TYPE STANDARD TABLE OF ty_attachment WITH KEY key,
       access        TYPE string,
-    END OF ty_packument ##NEEDED.
+    END OF ty_packument.
 
 
   CONSTANTS:
