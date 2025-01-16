@@ -142,7 +142,7 @@ INTERFACE zif_types PUBLIC.
       db                    TYPE string_table,
       dist                  TYPE ty_dist,
       deprecated            TYPE abap_bool,
-    END OF ty_manifest_abbreviated.
+    END OF ty_manifest_abbreviated ##NEEDED.
 
   " *** PACKUMENT ***
 
@@ -193,7 +193,7 @@ INTERFACE zif_types PUBLIC.
       __rev         TYPE string,
       __attachments TYPE STANDARD TABLE OF ty_attachment WITH KEY key,
       access        TYPE string,
-    END OF ty_packument.
+    END OF ty_packument ##NEEDED.
 
 
   CONSTANTS:
