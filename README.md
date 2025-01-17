@@ -5,12 +5,11 @@
   <p>&nbsp;</p>
 </div>
 
-![Version](https://img.shields.io/endpoint?url=https://shield.abap.space/version-shield-json/github/abapPM/abapPM/src/core/zif_abappm_version.intf.abap/c_version&label=Version&color=blue)
-[![Download](https://img.shields.io/badge/Download-Click_Here-blue)](https://github.com/abapPM/abapPM/build/zabappm_standalone.abap)
+![Version](https://img.shields.io/endpoint?url=https://shield.abappm.com/v1/version-shield-json/github/abapPM/abapPM-Types/src/core/zif_types.intf.abap/c_version&label=Version&color=blue)
 
 [![License](https://img.shields.io/github/license/abapPM/abapPM?label=License&color=success)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?color=success)](https://github.com/abapPM/.github/blob/main/CODE_OF_CONDUCT.md)
-[![REUSE Status](https://api.reuse.software/badge/github.com/abapPM/abapPM)](https://api.reuse.software/info/github.com/abapPM/abapPM)
+[![REUSE Status](https://api.reuse.software/badge/github.com/abapPM/abapPM-Types)](https://api.reuse.software/info/github.com/abapPM/abapPM-Types)
 
 # apm Types
 
@@ -56,7 +55,7 @@ CONSTANTS BEGIN OF c_db
 
 ## Contributions
 
-All contributions are welcome! Read our [Contribution Guidelines](https://github.com/abapPM/abapPM/blob/main/CONTRIBUTING.md), fork this repo, and create a pull request.
+All contributions are welcome! Read our [Contribution Guidelines](https://github.com/abapPM/abapPM-Types/blob/main/CONTRIBUTING.md), fork this repo, and create a pull request.
 
 Install `apm types` using [abapGit](https://github.com/abapGit/abapGit) by creating a new online repository for https://github.com/abapPM/abapPM-Types.
 
