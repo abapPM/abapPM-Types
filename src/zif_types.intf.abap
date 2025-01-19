@@ -71,8 +71,7 @@ INTERFACE zif_types PUBLIC.
   " *** PACKAGE.ABAP.JSON ***
 
   TYPES:
-    "! Full manifest (fetched with "accept: application/json" in HTTP headers)
-    "! This type mirrors the package.abap.json schema
+    "! Schema for package.abap.json
     BEGIN OF ty_package_json,
       name                  TYPE string,
       version               TYPE string,
@@ -226,6 +225,7 @@ INTERFACE zif_types PUBLIC.
     BEGIN OF c_engine,
       abap TYPE string VALUE 'abap',
       apm  TYPE string VALUE 'apm',
+      btp  TYPE string VALUE 'btp',
     END OF c_engine.
 
   CONSTANTS:
