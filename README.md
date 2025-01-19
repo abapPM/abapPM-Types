@@ -5,7 +5,7 @@
   <p>&nbsp;</p>
 </div>
 
-![Version](https://img.shields.io/endpoint?url=https://shield.abappm.com/v1/version-shield-json/github/abapPM/abapPM-Types/src/core/zif_types.intf.abap/c_version&label=Version&color=blue)
+![Version](https://img.shields.io/endpoint?url=https://shield.abappm.com/github/abapPM/abapPM-Types/src/core/zif_types.intf.abap/c_version&label=Version&color=blue)
 
 [![License](https://img.shields.io/github/license/abapPM/abapPM?label=License&color=success)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?color=success)](https://github.com/abapPM/.github/blob/main/CODE_OF_CONDUCT.md)
@@ -57,7 +57,7 @@ CONSTANTS BEGIN OF c_db
 
 All contributions are welcome! Read our [Contribution Guidelines](https://github.com/abapPM/abapPM-Types/blob/main/CONTRIBUTING.md), fork this repo, and create a pull request.
 
-Install `apm types` using [abapGit](https://github.com/abapGit/abapGit) by creating a new online repository for https://github.com/abapPM/abapPM-Types.
+Install `apm types` using [abapGit](https://github.com/abapGit/abapGit) by creating a new online repository for `https://github.com/abapPM/abapPM-Types`.
 
 Recommended SAP Package: `$APM-TYPES`
 
@@ -67,4 +67,4 @@ Made with ❤️ in Canada
 
 Copyright 2024 apm.to Inc. <https://apm.to>
 
-Follow [@marcf.be](https://bsky.app/profile/marcf.be) on Bluesky or [@marcfbe](https://linkedin.com/in/marcfbe) on LinkedIn
+Follow [@marcf.be](https://bsky.app/profile/marcf.be) on Bluesky and [@marcfbe](https://linkedin.com/in/marcfbe) on LinkedIn
