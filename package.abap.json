@@ -1,21 +1,22 @@
 {
-  "name": "abappm-types",
+  "name": "@apm/types",
   "version": "1.0.0",
-  "description": "ABAPPM-TYPES",
-  "type": "module",
+  "description": "Types and Constants for apm",
   "keywords": [
     "abap",
     "apm",
+    "types",
+    "constants",
     "module"
   ],
   "homepage": "https://abappm.com",
   "bugs": {
-    "url": "https://github.com/abapPM/abapPM-Types"
+    "url": "https://github.com/abapPM/abapPM-Types/issues"
   },
   "license": "MIT",
   "author": {
     "name": "Marc Bernard",
-    "url": "https://abappm.com"
+    "url": "https://github.com/mbtools"
   },
   "maintainers": [
     {
@@ -24,14 +25,12 @@
     }
   ],
   "repository": {
+    "type": "https",
     "url": "https://github.com/abapPM/abapPM-Types"
   },
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/abapPM"
-  },
-  "dependencies": {
-    "error": "^1.0.0"
+    "url": "https://github.com/sponsors/abappm"
   },
   "engines": {
     "abap": ">=7.50",
