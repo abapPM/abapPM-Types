@@ -4,7 +4,7 @@
   </picture>
 </div>
 
-![Version](https://img.shields.io/endpoint?url=https://shield.abappm.com/github/abapPM/abapPM-Types/src/zif_types.intf.abap/c_version&label=Version&color=blue)
+![Version](https://img.shields.io/endpoint?url=https://shield.abappm.com/github/abapPM/abapPM-Types/src/%2523apmg%2523if_types.intf.abap/c_version&label=Version&color=blue)
 
 [![License](https://img.shields.io/github/license/abapPM/abapPM-Types?label=License&color=success)](https://github.com/abapPM/abapPM-Types/blob/main/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?color=success)](https://github.com/abapPM/.github/blob/main/CODE_OF_CONDUCT.md)
@@ -33,7 +33,7 @@ TYPES BEGIN OF ty_manifest
 TYPES BEGIN OF ty_manifest_abbreviated
 
 "! Full packument (as fetched from registry)
-"! Some fields are hoisted from latest version to root
+"! Some fields are hoisted from the latest version to the root
 TYPES BEGIN OF ty_packument
 
 "! Supported Engines
@@ -70,7 +70,7 @@ All contributions are welcome! Read our [Contribution Guidelines](https://github
 
 You can install the developer version of `@apm/types` using [abapGit](https://github.com/abapGit/abapGit) by creating a new online repository for `https://github.com/abapPM/abapPM-Types`.
 
-Recommended SAP Package: `$APM-TYPES`
+Recommended SAP Package: `/APMG/APM-TYPES`
 
 ## About
 
