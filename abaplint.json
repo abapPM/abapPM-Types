@@ -30,7 +30,8 @@
     "allowed_object_types": {
       "allowed": [
         "DEVC",
-        "INTF"
+        "INTF",
+        "NSPC"
       ]
     },
     "ambiguous_statement": true,
@@ -173,7 +174,7 @@
       "aqqu": "^Z",
       "aqsg": "^Z",
       "auth": "^Z",
-      "clas": "^ZC(L|X)\\_TYPES",
+      "clas": "^/APMG/C(L|X)_TYPES",
       "cmod": "^Z",
       "doma": "^Z",
       "dtel": "^Z",
@@ -185,11 +186,11 @@
       "idoc": "^Z",
       "ignoreNames": [],
       "ignorePatterns": [],
-      "intf": "^ZIF\\_TYPES",
+      "intf": "^/APMG/IF_TYPES",
       "msag": "^Z",
       "patternKind": "required",
       "pinf": "^Z",
-      "prog": "^Z",
+      "prog": "^/APMG/",
       "sfpf": "^Z",
       "sfpi": "^Z",
       "shlp": "^Z",
@@ -272,7 +273,7 @@
     "xml_consistency": true
   },
   "syntax": {
-    "errorNamespace": "^(Z|Y|LCL_|TY_|LIF_)",
+    "errorNamespace": "^(/APMG/|LCL_|TY_|LIF_)",
     "globalConstants": [],
     "globalMacros": [],
     "version": "v750"

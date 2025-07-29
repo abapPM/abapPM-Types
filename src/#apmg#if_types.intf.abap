@@ -1,4 +1,4 @@
-INTERFACE zif_types PUBLIC.
+INTERFACE /apmg/if_types PUBLIC.
 
 ************************************************************************
 * apm Types
@@ -266,6 +266,8 @@ INTERFACE zif_types PUBLIC.
       mit               TYPE string VALUE 'MIT',
       mpl_2_0           TYPE string VALUE 'MPL-2.0',
       ms_pl             TYPE string VALUE 'MS-PL',
+      fsl_1_1_alv2      TYPE string VALUE 'FSL-1.1-ALv2',
+      fsl_1_1_mit       TYPE string VALUE 'FSL-1.1-MIT',
       unlicensed        TYPE string VALUE 'UNLICENSED',
     END OF c_license.
 
