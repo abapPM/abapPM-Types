@@ -17,7 +17,6 @@ INTERFACE /apmg/if_types PUBLIC.
 
   CONSTANTS c_version TYPE string VALUE '1.0.0' ##NO_TEXT.
 
-
   TYPES:
     "! Email
     ty_email TYPE string,
@@ -86,13 +85,18 @@ INTERFACE /apmg/if_types PUBLIC.
       unpacked_size TYPE i,
       integrity     TYPE string,
       signatures    TYPE STANDARD TABLE OF ty_signature WITH KEY keyid,
-    END OF ty_dist.
+    END OF ty_dist,
+    "! SAP Package
+    BEGIN OF ty_devclass,
+      default               TYPE devclass,
+      abap_language_version TYPE uccheck,
+    END OF ty_devclass.
 
   " *** PACKAGE.ABAP.JSON ***
 
   TYPES:
     "! Schema for package.abap.json
-    "! Everything but "icon" is also in regular npm package.json
+    "! Everything but "icon" and "devclass" is also in regular npm package.json
     BEGIN OF ty_package_json,
       name                  TYPE string,
       version               TYPE string,
@@ -121,6 +125,7 @@ INTERFACE /apmg/if_types PUBLIC.
       db                    TYPE string_table,
       private               TYPE abap_bool,
       readme                TYPE string,
+      devclass              TYPE ty_devclass,
     END OF ty_package_json.
 
   " *** MANIFEST ***
