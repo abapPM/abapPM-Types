@@ -25,7 +25,7 @@ INTERFACE /apmg/if_types PUBLIC.
     "! Semantic version of package
     ty_version  TYPE string,
     "! Semantic versions of package
-    ty_versions TYPE STANDARD TABLE OF ty_version WITH KEY table_line,
+    ty_versions TYPE STANDARD TABLE OF ty_version WITH KEY table_line ##NEEDED,
     "! Package specification (version, range, tag name, git url, or tarball URL)
     ty_spec     TYPE string,
     "! Email
