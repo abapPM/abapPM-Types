@@ -17,7 +17,12 @@ INTERFACE /apmg/if_types PUBLIC.
 
   CONSTANTS c_version TYPE string VALUE '1.0.0' ##NO_TEXT.
 
+  " Maximum key length to allow transporting entries
+  CONSTANTS c_max_key_len TYPE i VALUE 120.
+
   TYPES:
+    "! Key for DB persistence
+    ty_key      TYPE c LENGTH c_max_key_len,
     "! SAP package (always upper case)
     ty_devclass TYPE devclass,
     "! Name of package in registry (always lower case)
