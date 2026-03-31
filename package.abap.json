@@ -5,9 +5,9 @@
   "keywords": [
     "abap",
     "apm",
-    "types",
     "constants",
-    "module"
+    "module",
+    "types"
   ],
   "homepage": "https://abappm.com",
   "bugs": {
