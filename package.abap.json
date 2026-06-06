@@ -2,6 +2,7 @@
   "name": "@apm/types",
   "version": "1.0.0",
   "description": "Types and Constants for apm",
+  "type": "module",
   "keywords": [
     "abap",
     "apm",
